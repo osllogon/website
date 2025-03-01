@@ -1,6 +1,10 @@
-*.db
-.states
-*.py[cod]
+# Folders
 __pycache__/
 .web
 assets/external/
+.vscode/
+
+# Files
+*.db
+.states
+*.py[cod]
