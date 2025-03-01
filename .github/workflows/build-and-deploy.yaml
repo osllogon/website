@@ -31,7 +31,7 @@ jobs:
           reflex export --no-zip --frontend-only
 
       - name: Upload frontend build 📦
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: frontend
           path: .web/_static/
@@ -49,7 +49,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Download website build 📦
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: frontend
           path: frontend/
