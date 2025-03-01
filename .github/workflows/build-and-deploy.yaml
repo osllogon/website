@@ -16,7 +16,7 @@ jobs:
       - name: Set up Python from `.python-version` 🐍
         uses: actions/setup-python@v5
         with:
-          python-version-file: .python-version
+          python-version-file: 3.11
 
       - name: Install dependencies 📦
         run: |
