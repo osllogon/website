@@ -55,7 +55,7 @@ jobs:
           path: frontend/
 
       - name: Deploy to GitHub Pages 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
+        uses: actions/deploy-pages@v4
         with:
           folder: frontend/
 
