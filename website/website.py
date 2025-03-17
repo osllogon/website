@@ -9,13 +9,13 @@ import reflex as rx
 style = {
     "font_family": "JetBrains Mono",
 }
-stylesheets=[
+stylesheets = [
     "css/font.css",
 ]
 
 
 app = rx.App(
     theme=rx.theme(appearance="dark", accent_color="violet"),
-    style=style,
-    stylesheets=stylesheets
+    style=style,  # type: ignore
+    stylesheets=stylesheets,
 )

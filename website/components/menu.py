@@ -1,7 +1,6 @@
-
-
 # 3pps
 import reflex as rx
+
 
 def navbar_icons_item(text: str, icon: str, url: str) -> rx.Component:
     return rx.link(
@@ -11,7 +10,8 @@ def navbar_icons_item(text: str, icon: str, url: str) -> rx.Component:
         ),
         href=url,
     )
-    
+
+
 def get_menu() -> rx.Component:
     """
     This function returns the menu for the application.
@@ -19,11 +19,11 @@ def get_menu() -> rx.Component:
     Returns:
         Menu component.
     """
-    
+
     menu: rx.Component = rx.box(
         rx.hstack(
             navbar_icons_item("Home", "home", "/#"),
-            navbar_icons_item("Experience", "book-open", "/#"),
+            navbar_icons_item("Experience", "book-open", "/experience"),
             navbar_icons_item("Publications", "flask-conical", "/publications"),
             navbar_icons_item("Talks", "mic-vocal", "/#"),
             spacing="6",
@@ -34,5 +34,5 @@ def get_menu() -> rx.Component:
         padding="1em",
         width="100%",
     )
-    
+
     return menu
