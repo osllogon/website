@@ -35,8 +35,8 @@ def experience_page() -> rx.Component:
                     "Head of the Geometric Artificial Intelligence (GAI) Lab.",
                     "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
                     "telecommunications network optimizer that improves the "
-                    "uplink interference with Graph Neural Networks."
-                ]
+                    "uplink interference with Graph Neural Networks.",
+                ],
             ),
             experience_card(
                 "Adjunct Professor",
@@ -47,8 +47,8 @@ def experience_page() -> rx.Component:
                 [
                     "Computer Vision II, Theory & Lab Professor (2024).",
                     "Deep Learning, Theory & Lab Professor (2024-2025).",
-                    "Natural Language Processing (NLP), Lab Professor (2024)."
-                ]
+                    "Natural Language Processing (NLP), Lab Professor (2024).",
+                ],
             ),
             experience_card(
                 "Experienced Data Scientist",
@@ -60,8 +60,7 @@ def experience_page() -> rx.Component:
                     "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
                     "telecommunications network optimizer that improves the uplink "
                     "interference with Graph Neural Networks.",
-                    
-                ]
+                ],
             ),
             experience_card(
                 "Data Scientist",
@@ -73,9 +72,8 @@ def experience_page() -> rx.Component:
                     "Data Scientist in Uplink Optimizer, telecommunications network "
                     "optimizer that improves the uplink interference with Graph Neural "
                     "Networks.",
-                    "Expert Data Scientist in Graph Neural Networks."
-                    
-                ]
+                    "Expert Data Scientist in Graph Neural Networks.",
+                ],
             ),
             experience_card(
                 "Data Scientist Intern",
@@ -88,9 +86,8 @@ def experience_page() -> rx.Component:
                     "similarity between internal inquiries to save time to other "
                     "departments",
                     "Research project about detection of cybersecurity vulnerabilities "
-                    "based on packages descriptions "
-                    
-                ]
+                    "based on packages descriptions ",
+                ],
             ),
             experience_card(
                 "Software Engineer Intern",
@@ -98,10 +95,7 @@ def experience_page() -> rx.Component:
                 "Sep 2020 - March 2021",
                 "/images/stemy_logo.png",
                 "Software Engineer Intern at Stemy Energy:",
-                [
-                    "Backend and frontend development using Django framework."
-                    
-                ]
+                ["Backend and frontend development using Django framework."],
             ),
             experience_card(
                 "Data Scientist Intern",
@@ -109,20 +103,17 @@ def experience_page() -> rx.Component:
                 "Jul 2020 - Aug 2020",
                 "/images/management_solutions.svg",
                 "Data Scientist Intern at Management Solutions:",
-                [
-                    "development of an Auto Machine Learning tool."
-                    
-                ]
+                ["development of an Auto Machine Learning tool."],
             ),
             experience_card(
-                "Business Process Management Engineer Intern",
+                "Software Engineer Intern",
                 "Telefonica",
                 "Jan 2020 - Jun 2020",
                 "/images/telefonica_logo.png",
                 "Member of the Automation Lab. The mains tasks of the team were to "
                 "analyze and develop automation tools for different departments inside "
                 "Telefónica.",
-                []
+                [],
             ),
             experience_card(
                 "Software Engineer Intern",
@@ -131,7 +122,7 @@ def experience_page() -> rx.Component:
                 "/images/icai_logo.png",
                 "Intern for the development of an optimizer tool for filling containers"
                 " and trucks.",
-                []
+                [],
             ),
             width="100%",
             spacing="0",
