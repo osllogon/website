@@ -5,7 +5,8 @@ This module contains the code to generate cards.
 # 3pps
 import reflex as rx
 
-from website.components.buttons import get_home_button
+# Own modules
+from website.components.buttons import get_special_button
 
 
 def experience_card(
@@ -18,9 +19,17 @@ def experience_card(
 ) -> rx.Component:
     """
     This function creates a card for the experience section.
+    
+    Args:
+        title: Title of the position.
+        company: Company name.
+        duration: String indicating the duration.
+        logo_path: Path of the logo showed in the card.
+        introduction: Introduction text for the description.
+        bullets: List of bullet points for the description.
 
     Returns:
-        Card for Experience section.
+        Card for experience section.
     """
 
     return rx.hstack(
@@ -58,6 +67,21 @@ def publication_card(
     github_url: str,
     logo_path: str,
 ) -> rx.Component:
+    """
+    This function creates a card for the publications section.
+
+    Args:
+        title: Title of the publication.
+        authors: List with the names of the authors.
+        abstract: Text with the abstract of the publication.
+        paper_url: Link to the publication.
+        github_url: Link to the source code in GitHub.
+        logo_path: Path of the logo to use in the card.
+
+    Returns:
+        Card for publications section.
+    """
+    
     return rx.hstack(
         rx.box(
             rx.center(
@@ -84,16 +108,16 @@ def publication_card(
                 style={"height": 180},  # type: ignore
             ),
             rx.hstack(
-                get_home_button(
+                get_special_button(
                     "Manuscript",
                     "graduation-cap",
-                    "https://link.springer.com/chapter/10.1007/978-3-031-63787-2_20",
+                    paper_url,
                     "amber",
                 ),
-                get_home_button(
+                get_special_button(
                     "Source Code",
                     "github",
-                    "https://github.com/EricssonResearch/gnn-neighbors-xai",
+                    github_url,
                     "gray",
                 ),
                 margin_top="2%",
@@ -113,6 +137,10 @@ def get_description_experience(introduction: str, bullets: list[str]) -> rx.Comp
     """
     This function defines a description to be included in an experience
     card.
+    
+    Args:
+        introduction: Text as an introduction.
+        bullets: List of texts to be showed as bullets points.
 
     Returns:
         Vertical stack with a brief description and a list of bullets

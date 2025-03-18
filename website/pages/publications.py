@@ -1,3 +1,7 @@
+"""
+This module contains the code for the publications.
+"""
+
 # 3pps
 import reflex as rx
 

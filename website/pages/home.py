@@ -7,7 +7,7 @@ import reflex as rx
 
 # Own modules
 from website.components.menu import get_menu
-from website.components.buttons import get_home_button
+from website.components.buttons import get_special_button
 
 
 @rx.page(route="/", title="Oscar Llorente | Home")
@@ -35,34 +35,34 @@ def home_page() -> rx.Component:
                     width="100%",
                 ),
                 rx.hstack(
-                    get_home_button(
+                    get_special_button(
                         "Linkedin",
                         "linkedin",
                         "https://www.linkedin.com/in/osllogon",
                         "blue",
                     ),
-                    get_home_button(
+                    get_special_button(
                         "GitHub", "github", "https://github.com/osllogon", "gray"
                     ),
-                    get_home_button(
+                    get_special_button(
                         "Scholar",
                         "graduation-cap",
                         "https://scholar.google.es/citations?user=AL2xF9AAAAAJ&hl=en",
                         "amber",
                     ),
-                    get_home_button(
+                    get_special_button(
                         "Gmail",
                         "mail",
                         "mailto:oscar.llorente.gonzalez@ericsson.com",
                         "red",
                     ),
-                    get_home_button(
+                    get_special_button(
                         "Outlook",
                         "mail",
                         "mailto:oscar.llorente.gonzalez@ericsson.com",
                         "indigo",
                     ),
-                    get_home_button("CV", "sticky-note", "files/CV.pdf", "green"),
+                    get_special_button("CV", "sticky-note", "files/CV.pdf", "green"),
                     justify="center",
                     align="center",
                     width="100%",

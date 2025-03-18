@@ -6,7 +6,7 @@ This module contains the code to define buttons.
 import reflex as rx
 
 
-def get_home_button(text: str, icon_name: str, url: str, color: str) -> rx.Component:
+def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Component:
     """
     _summary_
 
