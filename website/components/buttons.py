@@ -15,16 +15,26 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
     """
 
     # Define button
-    button: rx.Component = rx.link(
-        rx.button(
+    if url != "":
+        button: rx.Component = rx.link(
+            rx.button(
+                rx.icon(icon_name),
+                text,
+                size="3",
+                variant="surface",
+                color_scheme=color,  # type: ignore
+                cursor="pointer",
+            ),
+            href=url,
+        )
+
+    else:
+        button = rx.button(
             rx.icon(icon_name),
             text,
             size="3",
             variant="surface",
             color_scheme=color,  # type: ignore
-            cursor="pointer",
-        ),
-        href=url,
-    )
+        )
 
     return button

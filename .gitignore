@@ -1,11 +1,10 @@
-# Folders
-__pycache__/
-.web
-assets/external/
-.vscode/
-
 # Files
+# Folders
 *.db
-.states
 *.py[cod]
+.states
 .vercel
+.vscode/
+.web
+__pycache__/
+assets/external/

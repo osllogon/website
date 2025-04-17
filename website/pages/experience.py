@@ -30,12 +30,16 @@ def experience_page() -> rx.Component:
                 "/images/ericsson_logo.png",
                 "Data Scientist at Ericsson Cognitive Network Solutions (JS6):",
                 [
-                    "Member of the Data Science Board, group of experts who manage "
-                    "Machine Learning in the organization.",
+                    (
+                        "Member of the Data Science Board, group of experts who manage "
+                        "Machine Learning in the organization."
+                    ),
                     "Head of the Geometric Artificial Intelligence (GAI) Lab.",
-                    "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
-                    "telecommunications network optimizer that improves the "
-                    "uplink interference with Graph Neural Networks.",
+                    (
+                        "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
+                        "telecommunications network optimizer that improves the "
+                        "uplink interference with Graph Neural Networks."
+                    ),
                 ],
             ),
             experience_card(
@@ -43,7 +47,8 @@ def experience_page() -> rx.Component:
                 "Comillas Pontifical University (ICAI)",
                 "Jan 2024 - Present",
                 "/images/icai_logo.png",
-                "Bachelor of Engineering, Mathematical Engineering & Artificial Intelligence (iMAT):",
+                "Bachelor of Engineering, Mathematical Engineering & Artificial"
+                " Intelligence (iMAT):",
                 [
                     "Computer Vision II, Theory & Lab Professor (2024).",
                     "Deep Learning, Theory & Lab Professor (2024-2025).",
@@ -57,9 +62,11 @@ def experience_page() -> rx.Component:
                 "/images/ericsson_logo.png",
                 "Data Scientist at Ericsson Cognitive Network Solutions (JS5):",
                 [
-                    "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
-                    "telecommunications network optimizer that improves the uplink "
-                    "interference with Graph Neural Networks.",
+                    (
+                        "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
+                        "telecommunications network optimizer that improves the uplink "
+                        "interference with Graph Neural Networks."
+                    ),
                 ],
             ),
             experience_card(
@@ -69,9 +76,11 @@ def experience_page() -> rx.Component:
                 "/images/ericsson_logo.png",
                 "Data Scientist at Ericsson Cognitive Network Solutions (JS4):",
                 [
-                    "Data Scientist in Uplink Optimizer, telecommunications network "
-                    "optimizer that improves the uplink interference with Graph Neural "
-                    "Networks.",
+                    (
+                        "Data Scientist in Uplink Optimizer, telecommunications network"
+                        " optimizer that improves the uplink interference with Graph"
+                        " Neural Networks."
+                    ),
                     "Expert Data Scientist in Graph Neural Networks.",
                 ],
             ),
@@ -82,11 +91,15 @@ def experience_page() -> rx.Component:
                 "/images/ericsson_logo.png",
                 "Data Scientist Intern at Ericsson:",
                 [
-                    "Development and implementation of a NLP projects, document "
-                    "similarity between internal inquiries to save time to other "
-                    "departments",
-                    "Research project about detection of cybersecurity vulnerabilities "
-                    "based on packages descriptions ",
+                    (
+                        "Development and implementation of a NLP projects, document "
+                        "similarity between internal inquiries to save time to other "
+                        "departments"
+                    ),
+                    (
+                        "Research project about detection of cybersecurity"
+                        " vulnerabilities based on packages descriptions "
+                    ),
                 ],
             ),
             experience_card(
