@@ -6,7 +6,7 @@ This module contains the code to generate cards.
 import reflex as rx
 
 # Own modules
-from website.components.buttons import get_special_button
+from website.components.buttons import get_special_button, get_talk_buttons
 
 
 def experience_card(
@@ -19,7 +19,7 @@ def experience_card(
 ) -> rx.Component:
     """
     This function creates a card for the experience section.
-    
+
     Args:
         title: Title of the position.
         company: Company name.
@@ -81,7 +81,7 @@ def publication_card(
     Returns:
         Card for publications section.
     """
-    
+
     return rx.hstack(
         rx.box(
             rx.center(
@@ -133,11 +133,73 @@ def publication_card(
     )
 
 
+def talk_card(
+    title: str,
+    organizer: str,
+    date: str,
+    logo_path: str,
+    abstract: str,
+    recording_url: str,
+    source_url: str,
+    slides_path: str,
+    language: str,
+) -> rx.Component:
+    """
+    This function creates a card for the talks section.
+
+    Args:
+        title: Title of the publication.
+        authors: List with the names of the authors.
+        abstract: Text with the abstract of the publication.
+        paper_url: Link to the publication.
+        github_url: Link to the source code in GitHub.
+        logo_path: Path of the logo to use in the card.
+
+    Returns:
+        Card for publications section.
+    """
+
+    return rx.hstack(
+        rx.box(
+            rx.center(
+                rx.image(
+                    src=logo_path,
+                    justify_content="center",
+                    aspect_ratio="initial",
+                    max_height="10em",
+                ),
+            ),
+            width="25%",
+        ),
+        rx.vstack(
+            rx.heading(title, size="4"),
+            rx.text(f"{organizer}, {date}", font_weight="bold", color="gray"),
+            rx.scroll_area(
+                rx.text(abstract, style={"text_align": "justify"}),  # type: ignore
+                type="always",
+                scrollbars="vertical",
+                style={"height": 180},  # type: ignore
+            ),
+            rx.hstack(
+                *get_talk_buttons(recording_url, source_url, slides_path, language),
+                margin_top="2%",
+            ),
+            align="start",
+            width="75%",
+        ),
+        width="50%",
+        spacing="9",
+        border_top=f"1.5px solid {rx.color('violet', 6)}",
+        padding="2%",
+        align_items="center",
+    )
+
+
 def get_description_experience(introduction: str, bullets: list[str]) -> rx.Component:
     """
     This function defines a description to be included in an experience
     card.
-    
+
     Args:
         introduction: Text as an introduction.
         bullets: List of texts to be showed as bullets points.

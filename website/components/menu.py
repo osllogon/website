@@ -25,7 +25,7 @@ def get_menu() -> rx.Component:
             navbar_icons_item("Home", "home", "/#"),
             navbar_icons_item("Experience", "book-open", "/experience"),
             navbar_icons_item("Publications", "flask-conical", "/publications"),
-            navbar_icons_item("Talks", "mic-vocal", "/#"),
+            navbar_icons_item("Talks", "mic-vocal", "/talks"),
             spacing="6",
             justify="center",
         ),
