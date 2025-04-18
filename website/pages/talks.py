@@ -29,7 +29,12 @@ def talks_page() -> rx.Component:
                 "PyData Madrid",
                 "Feb 2025",
                 "/images/pydata_logo.png",
-                "Graph Neural Networks are a recent branch of deep learning, used to model complex data structures that can be interpreted as graphs. In this talk we introduce the concept, explaining how to build these type of models and evaluating the available frameworks. Moreover, we explain a real use case, how we can use these models to optimize the cellular networks.",
+                "Graph Neural Networks are a recent branch of deep learning, used to"
+                " model complex data structures that can be interpreted as graphs. In"
+                " this talk we introduce the concept, explaining how to build these"
+                " type of models and evaluating the available frameworks. Moreover, we"
+                " explain a real use case, how we can use these models to optimize the"
+                " cellular networks.",
                 "https://www.youtube.com/live/JE1W22_XdEc?si=V2_i58-xFy8ymvKO&t=3385",
                 "https://guild.host/events/embeddings-para-contratacin-306046050",
                 "files/pydata_feb_2025.pptx",

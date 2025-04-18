@@ -40,8 +40,10 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
     return button
 
 
-def get_talk_buttons(recording_url: str, source_url: str, slides_path: str, language: str):
-    
+def get_talk_buttons(
+    recording_url: str, source_url: str, slides_path: str, language: str
+):
+
     buttons: list[rx.Component] = []
 
     if recording_url != "":
@@ -63,7 +65,7 @@ def get_talk_buttons(recording_url: str, source_url: str, slides_path: str, lang
                 "amber",
             ),
         )
-        
+
     if slides_path != "":
         buttons.append(
             get_special_button(
@@ -82,5 +84,5 @@ def get_talk_buttons(recording_url: str, source_url: str, slides_path: str, lang
             "jade",
         ),
     )
-    
+
     return buttons
