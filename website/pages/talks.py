@@ -28,16 +28,18 @@ def talks_page() -> rx.Component:
                 " networks",
                 "PyData Madrid",
                 "Feb 2025",
-                "",
-                "https://www.youtube.com/watch?v=JE1W22_XdEc",
-                "https://guild.host/events/embeddings-para-contratacin-306046050",
                 "/images/pydata_logo.png",
+                "Graph Neural Networks are a recent branch of deep learning, used to model complex data structures that can be interpreted as graphs. In this talk we introduce the concept, explaining how to build these type of models and evaluating the available frameworks. Moreover, we explain a real use case, how we can use these models to optimize the cellular networks.",
+                "https://www.youtube.com/live/JE1W22_XdEc?si=V2_i58-xFy8ymvKO&t=3385",
+                "https://guild.host/events/embeddings-para-contratacin-306046050",
+                "files/pydata_feb_2025.pptx",
                 "Spanish",
             ),
             talk_card(
                 "Evaluating Neighbor Explainability for Graph Neural Networks",
                 "XAI Global Conference",
                 "July 2024",
+                "/images/xai_conference_logo.png",
                 "Graph Neural Networks (GNNs) have rapidly emerged as powerful tools"
                 " for modeling complex data structures, particularly in the context of"
                 " telecommunications, chemistry and social networking. Explainability"
@@ -59,7 +61,7 @@ def talks_page() -> rx.Component:
                 " used.",
                 "",
                 "https://xaiworldconference.com/2024/timetable/event/s-17-a-1-2-2-2-3/",
-                "/images/xai_conference_logo.png",
+                "files/xai_conference.pdf",
                 "English",
             ),
             talk_card(
@@ -67,6 +69,7 @@ def talks_page() -> rx.Component:
                 " provide confidence to our customers",
                 "Learning on Graphs Conference (LoG) Madrid",
                 "Nov 2023",
+                "/images/log_logo.png",
                 "Cellular networks are a certain type of telecommunications networks"
                 " that can be easily modelled as a graph, which bring us the"
                 " possibility of using a GNN to optimize it. First, we can construct a"
@@ -86,7 +89,7 @@ def talks_page() -> rx.Component:
                 " bring, rather than a single prediction.",
                 "https://tv.urjc.es/video/656875f1f8ceb7494b770b62",
                 "https://logmeetupmadrid.github.io/",
-                "/images/log_logo.png",
+                "files/log.pptx",
                 "English",
             ),
             talk_card(
@@ -94,6 +97,7 @@ def talks_page() -> rx.Component:
                 " Neural Networks",
                 "Stanford Graph Learning Workshop (Poster)",
                 "Oct 2023",
+                "/images/stanford_logo.png",
                 "Optimizing cellular networks has been a very difficult task for a long"
                 " time. In these networks multiple problematic issues appear and the"
                 " high number of parameters and variables to optimize makes it a"
@@ -114,7 +118,7 @@ def talks_page() -> rx.Component:
                 " parameters based on the simulator model we have constructed.",
                 "https://www.youtube.com/clip/Ugkxdv8jC2XfIEm-a5R0OP__3gTySzzbeq-D",
                 "https://snap.stanford.edu/graphlearning-workshop-2023/",
-                "/images/stanford_logo.png",
+                "files/stanford.pptx",
                 "English",
             ),
             talk_card(
@@ -122,6 +126,7 @@ def talks_page() -> rx.Component:
                 " Single Shot with GNNs",
                 "PyTorch Conference",
                 "Oct 2023",
+                "/images/pytorch_logo.png",
                 "Optimizing cellular networks has been a very difficult task for a long"
                 " time. In these networks multiple problematic issues appear and the"
                 " high number of parameters and variables to optimize makes it a"
@@ -142,7 +147,7 @@ def talks_page() -> rx.Component:
                 " parameters based on the simulator model we have constructed.",
                 "https://www.youtube.com/watch?v=c96UxNyHuRo",
                 "",
-                "/images/pytorch_logo.png",
+                "files/pytorch_conf.pptx",
                 "English",
             ),
             width="100%",

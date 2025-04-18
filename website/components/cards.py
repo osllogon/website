@@ -6,7 +6,7 @@ This module contains the code to generate cards.
 import reflex as rx
 
 # Own modules
-from website.components.buttons import get_special_button
+from website.components.buttons import get_special_button, get_talk_buttons
 
 
 def experience_card(
@@ -137,14 +137,15 @@ def talk_card(
     title: str,
     organizer: str,
     date: str,
+    logo_path: str,
     abstract: str,
     recording_url: str,
     source_url: str,
-    logo_path: str,
+    slides_path: str,
     language: str,
 ) -> rx.Component:
     """
-    This function creates a card for the publications section.
+    This function creates a card for the talks section.
 
     Args:
         title: Title of the publication.
@@ -157,37 +158,6 @@ def talk_card(
     Returns:
         Card for publications section.
     """
-
-    buttons = []
-
-    if recording_url != "":
-        buttons.append(
-            get_special_button(
-                "Recording",
-                "youtube",
-                recording_url,
-                "red",
-            )
-        )
-
-    if source_url != "":
-        buttons.append(
-            get_special_button(
-                "Source",
-                "link",
-                source_url,
-                "amber",
-            ),
-        )
-
-    buttons.append(
-        get_special_button(
-            language,
-            "languages",
-            "",
-            "jade",
-        ),
-    )
 
     return rx.hstack(
         rx.box(
@@ -211,7 +181,7 @@ def talk_card(
                 style={"height": 180},  # type: ignore
             ),
             rx.hstack(
-                *buttons,
+                *get_talk_buttons(recording_url, source_url, slides_path, language),
                 margin_top="2%",
             ),
             align="start",

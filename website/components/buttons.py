@@ -8,10 +8,10 @@ import reflex as rx
 
 def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Component:
     """
-    _summary_
+    This functions gets special buttons.
 
     Returns:
-        _description_
+        Component representing a button.
     """
 
     # Define button
@@ -38,3 +38,49 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
         )
 
     return button
+
+
+def get_talk_buttons(recording_url: str, source_url: str, slides_path: str, language: str):
+    
+    buttons: list[rx.Component] = []
+
+    if recording_url != "":
+        buttons.append(
+            get_special_button(
+                "Recording",
+                "youtube",
+                recording_url,
+                "red",
+            )
+        )
+
+    if source_url != "":
+        buttons.append(
+            get_special_button(
+                "Source",
+                "link",
+                source_url,
+                "amber",
+            ),
+        )
+        
+    if slides_path != "":
+        buttons.append(
+            get_special_button(
+                "Slides",
+                "presentation",
+                slides_path,
+                "indigo",
+            ),
+        )
+
+    buttons.append(
+        get_special_button(
+            language,
+            "languages",
+            "",
+            "jade",
+        ),
+    )
+    
+    return buttons
