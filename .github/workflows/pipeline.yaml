@@ -1,4 +1,4 @@
-name: Project pipeline
+name: Project pipeline (lint and code check)
 
 on:
   push
