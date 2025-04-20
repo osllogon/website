@@ -14,7 +14,7 @@ The deployment of this project is done through vercel manually, so this has two 
 
     reflex export --frontend-only --no-zip
 
-This will create the version we need to upload inside a folder called `.web/`. Then, we can deploy it with vercel by command line. If you have not installed vercel just execute:
+This will create the version we need to upload inside a folder called `.web/`. Then, we can deploy with vercel by command line. If you have not installed vercel just execute:
 
     npm i -g vercel
 
