@@ -29,4 +29,6 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to Vercel
-        run: vercel --prod --yes --prebuilt --token $VERCEL_TOKEN
+        run: |
+          cd .web
+          vercel --prod --yes --token $VERCEL_TOKEN
