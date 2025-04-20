@@ -9,6 +9,7 @@ env:
 jobs:
   pipeline:
     name: Pipeline
+    runs-on: ubtuntu-latest
 
     steps:
       - name: Checkout repository
