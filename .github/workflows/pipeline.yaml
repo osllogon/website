@@ -28,6 +28,6 @@ jobs:
         run: uv run pylint --fail-under=8 .
       - name: Complexipy
         run: uv run complexipy -d low .
-      - name: Mypy:
+      - name: Mypy
         run: uv run mypy .
         
