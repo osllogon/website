@@ -12,7 +12,8 @@ jobs:
     name: Pipeline
 
   steps:
-    - uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v4
     - name: Install the latest version of uv and set the python version
       uses: astral-sh/setup-uv@v5
       with:
