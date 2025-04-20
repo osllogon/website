@@ -1,56 +1,24 @@
-name: Project pipeline (lint and code check)
+name: Pylint
 
-on:
-  push
-
-env:
-  TOML_PATH: "/pyproject.toml"
+on: [push]
 
 jobs:
-  setup:
-    name: Setup
-    runs-on: ubtuntu-latest
-
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.9", "3.10"]
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-      - name: Install the latest version of uv and set the python version
-        uses: astral-sh/setup-uv@v5
-        with:
-          pyproject-file: ${{ env.TOML_PATH }}
-      - name: Install dependencies
-        run: uv lock --frozen
-      - name: Black
-        run: uv run black --check . 
-      - name: Flake8
-        run: uv run flake8 .
-      - name: Pylint
-        run: uv run pylint --fail-under=8 .
-      - name: Complexipy
-        run: uv run complexipy -d low .
-      - name: Mypy
-        run: uv run mypy .
-
-  lint:
-    name: Lint
-    runs-on: ubtuntu-latest
-    needs: setup
-
-    steps:
-      - name: Black
-        run: uv run black --check . 
-      - name: Flake8
-        run: uv run flake8 .
-      - name: Pylint
-        run: uv run pylint --fail-under=8 .
-
-  code_check:
-    name: Code Check
-    runs-on: ubtuntu-latest
-    needs: setup
-
-    steps:
-      - name: Complexipy
-        run: uv run complexipy -d low .
-      - name: Mypy
+    - uses: actions/checkout@v4
+    - name: Set up Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v3
+      with:
+        python-version: ${{ matrix.python-version }}
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pylint
+    - name: Analysing the code with pylint
+      run: |
+        pylint $(git ls-files '*.py')
         run: uv run mypy .
