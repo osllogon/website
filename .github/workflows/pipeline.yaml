@@ -8,7 +8,7 @@ env:
 jobs:
   setup:
     name: Setup
-    runs-on: ubtuntu-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
