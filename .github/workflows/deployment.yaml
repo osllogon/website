@@ -22,7 +22,6 @@ jobs:
         run: uv lock --frozen
       - name: build-doc-reflex
         run: uv run reflex export --frontend-only --no-zip
-      - uses: actions/checkout@v2
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to vercel
