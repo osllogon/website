@@ -7,8 +7,8 @@ env:
   TOML_PATH: "/pyproject.toml"
 
 jobs:
-  pipeline:
-    name: Pipeline
+  setup:
+    name: Setup
     runs-on: ubtuntu-latest
 
     steps:
@@ -30,4 +30,27 @@ jobs:
         run: uv run complexipy -d low .
       - name: Mypy
         run: uv run mypy .
-        
+
+  lint:
+    name: Lint
+    runs-on: ubtuntu-latest
+    needs: setup
+
+    steps:
+      - name: Black
+        run: uv run black --check . 
+      - name: Flake8
+        run: uv run flake8 .
+      - name: Pylint
+        run: uv run pylint --fail-under=8 .
+
+  code_check:
+    name: Code Check
+    runs-on: ubtuntu-latest
+    needs: setup
+
+    steps:
+      - name: Complexipy
+        run: uv run complexipy -d low .
+      - name: Mypy
+        run: uv run mypy .
