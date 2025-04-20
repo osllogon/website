@@ -1,7 +1,6 @@
 name: Deployment
 env:
-  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
-  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
   TOML_PATH: "/pyproject.toml"
 
 on: [push]
@@ -25,8 +24,6 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to vercel
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
         run: |
           cd .web
-          vercel --prod --token $VERCEL_TOKEN
+          vercel --prod --yes --token $VERCEL_TOKEN
