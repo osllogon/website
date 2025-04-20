@@ -28,7 +28,8 @@ jobs:
         run: uv run reflex export --frontend-only --no-zip
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
-      - name: Upload to Vercel
+      - name: Upload to Vercel prod
         run: |
           cd .web
+          vercel --yes --token $VERCEL_TOKEN
           vercel --prod --yes --token $VERCEL_TOKEN
