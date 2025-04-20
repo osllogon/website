@@ -1,0 +1,49 @@
+name: Deployment
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+  TOML_PATH: "/pyproject.toml"
+
+on: [push]
+
+jobs:
+  setup:
+    name: Setup
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+
+  build-doc:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+    needs: setup
+
+    steps:
+      - name: Install the latest version of uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          pyproject-file: ${{ env.TOML_PATH }}
+      - name: Install dependencies
+        run: uv lock --frozen
+      - name: build-doc-reflex
+        run: uv run reflex export --frontend-only --no-zip 
+
+  publish-doc:
+    runs-on: ubuntu-latest
+    needs: build-doc
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+      - name: Upload to vercel
+        with:
+          path: .web/
+        run: |
+          cd .web
+          vercel pull --yes --environment=preview
+          vercel build
+          vercel deploy --prebuilt

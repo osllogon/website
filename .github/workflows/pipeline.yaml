@@ -13,12 +13,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: Install the latest version of uv and set the python version
-        uses: astral-sh/setup-uv@v5
-        with:
-          pyproject-file: ${{ env.TOML_PATH }}
-      - name: Install dependencies
-        run: uv lock --frozen
 
   lint:
     name: Lint
@@ -26,6 +20,12 @@ jobs:
     needs: setup
 
     steps:
+      - name: Install the latest version of uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          pyproject-file: ${{ env.TOML_PATH }}
+      - name: Install dependencies
+        run: uv lock --frozen
       - name: Black
         run: uv run black --check . 
       - name: Flake8
@@ -39,6 +39,12 @@ jobs:
     needs: setup
 
     steps:
+      - name: Install the latest version of uv and set the python version
+        uses: astral-sh/setup-uv@v5
+        with:
+          pyproject-file: ${{ env.TOML_PATH }}
+      - name: Install dependencies
+        run: uv lock --frozen
       - name: Complexipy
         run: uv run complexipy -d low .
       - name: Mypy
