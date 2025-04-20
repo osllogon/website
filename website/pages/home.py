@@ -79,7 +79,7 @@ def home_page() -> rx.Component:
                     rx.text(
                         "Now, about my work, currently I am a Senior Data Scientist at"
                         " Ericsson. Specifically, I work in a department called"
-                        " Cognitive Network Solutions (CNS) that uses AI to diagnose"
+                        " Cognitive Network Solutions that uses AI to diagnose"
                         " the different problems of cellular networks and optimizes"
                         " them. Since in Ericsson the term Data Scientist is a bit"
                         " broad, let me explain what I do in my day-to-day. I think in"
