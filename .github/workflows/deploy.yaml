@@ -8,7 +8,7 @@ env:
 on:
   push:
     branches:
-      - dev
+      - main
 
 jobs:
   doc:
@@ -31,5 +31,4 @@ jobs:
       - name: Upload to Vercel prod
         run: |
           cd .web
-          vercel --yes --token $VERCEL_TOKEN
           vercel --prod --yes --token $VERCEL_TOKEN
