@@ -1,0 +1,24 @@
+name: Project pipeline
+
+on:
+  push
+
+env:
+
+  PYTHON_VERSION: "3.11.*"
+
+jobs:
+  pipeline:
+    name: Pipeline
+
+  steps:
+    - uses: actions/checkout@v4
+    - name: Install the latest version of uv and set the python version
+      uses: astral-sh/setup-uv@v5
+      with:
+        python-version: ${{ env.PYTHON_VERSION }}
+    - name: Install dependencies
+      run: uv lock --frozen
+    - name: Black check
+      run: black --check . 
+        
