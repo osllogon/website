@@ -44,6 +44,4 @@ jobs:
           path: .web/
         run: |
           cd .web
-          vercel pull --yes --environment=preview
-          vercel build
-          vercel deploy --prebuilt
+          vercel --prod --yes
