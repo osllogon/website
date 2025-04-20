@@ -26,7 +26,6 @@ jobs:
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to vercel
-        with:
-          path: .web/
         run: |
+          cd .web
           vercel --prod --yes
