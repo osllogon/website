@@ -6,7 +6,11 @@ This module contains the code to generate cards.
 import reflex as rx
 
 # Own modules
-from website.components.buttons import get_special_button, get_talk_buttons
+from website.components.buttons import (
+    get_special_button,
+    get_talk_buttons,
+    get_course_buttons,
+)
 
 
 def experience_card(
@@ -47,6 +51,56 @@ def experience_card(
         rx.vstack(
             rx.heading(title, size="4"),
             rx.text(f"{company}, {duration}", font_weight="bold", color="gray"),
+            get_description_experience(introduction, bullets),
+            align="start",
+            width="75%",
+        ),
+        width="50%",
+        spacing="9",
+        border_top=f"1.5px solid {rx.color('violet', 6)}",
+        padding="2%",
+        align_items="center",
+    )
+
+
+def education_card(
+    title: str,
+    university: str,
+    duration: str,
+    logo_path: str,
+    introduction: str,
+    bullets: list[str],
+) -> rx.Component:
+    """
+    This function creates a card for the experience section.
+
+    Args:
+        title: Title of the position.
+        company: Company name.
+        duration: String indicating the duration.
+        logo_path: Path of the logo showed in the card.
+        introduction: Introduction text for the description.
+        bullets: List of bullet points for the description.
+
+    Returns:
+        Card for experience section.
+    """
+
+    return rx.hstack(
+        rx.box(
+            rx.center(
+                rx.image(
+                    src=logo_path,
+                    justify_content="center",
+                    aspect_ratio="initial",
+                    max_height="10em",
+                ),
+            ),
+            width="25%",
+        ),
+        rx.vstack(
+            rx.heading(title, size="4"),
+            rx.text(f"{university}, {duration}", font_weight="bold", color="gray"),
             get_description_experience(introduction, bullets),
             align="start",
             width="75%",
@@ -218,4 +272,64 @@ def get_description_experience(introduction: str, bullets: list[str]) -> rx.Comp
                 "text_align": "justify",
             },
         ),
+    )
+
+
+def course_card(
+    title: str,
+    company: str,
+    date: str,
+    logo_path: str,
+    abstract: str,
+    url: str,
+    file_path: str,
+) -> rx.Component:
+    """
+    This function creates a card for the experience section.
+
+    Args:
+        title: Title of the position.
+        company: Company name.
+        duration: String indicating the duration.
+        logo_path: Path of the logo showed in the card.
+        introduction: Introduction text for the description.
+        bullets: List of bullet points for the description.
+
+    Returns:
+        Card for experience section.
+    """
+
+    return rx.hstack(
+        rx.box(
+            rx.center(
+                rx.image(
+                    src=logo_path,
+                    justify_content="center",
+                    aspect_ratio="initial",
+                    max_height="10em",
+                ),
+            ),
+            width="25%",
+        ),
+        rx.vstack(
+            rx.heading(title, size="4"),
+            rx.text(f"{company}, {date}", font_weight="bold", color="gray"),
+            rx.scroll_area(
+                rx.text(abstract, style={"text_align": "justify"}),  # type: ignore
+                type="always",
+                scrollbars="vertical",
+                style={"height": 75},  # type: ignore
+            ),
+            rx.hstack(
+                *get_course_buttons(url, file_path),
+                margin_top="2%",
+            ),
+            align="start",
+            width="75%",
+        ),
+        width="50%",
+        spacing="9",
+        border_top=f"1.5px solid {rx.color('violet', 6)}",
+        padding="2%",
+        align_items="center",
     )

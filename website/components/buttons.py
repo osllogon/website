@@ -43,7 +43,6 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
 def get_talk_buttons(
     recording_url: str, source_url: str, slides_path: str, language: str
 ):
-
     buttons: list[rx.Component] = []
 
     if recording_url != "":
@@ -84,5 +83,43 @@ def get_talk_buttons(
             "jade",
         ),
     )
+
+    return buttons
+
+
+def get_course_buttons(url: str, path: str) -> list[rx.Component]:
+    """
+    This function computes the course buttons.
+
+    Args:
+        url: Url of the credential.
+        path: Path of the credentials file.
+
+    Returns:
+        List of buttons.
+    """
+
+    # Define buttons
+    buttons: list[rx.Component] = []
+
+    if url != "":
+        buttons.append(
+            get_special_button(
+                "URL",
+                "link",
+                url,
+                "amber",
+            ),
+        )
+
+    if path != "":
+        buttons.append(
+            get_special_button(
+                "Path",
+                "presentation",
+                path,
+                "indigo",
+            ),
+        )
 
     return buttons
