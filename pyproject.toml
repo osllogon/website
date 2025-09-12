@@ -9,7 +9,7 @@ readme = "README.md"
 requires-python = "==3.11.*"
 dependencies = [
     "black==25.1.0",
-    "complexipy==1.2.0",
+    "complexipy==4.1.0",
     "flake8==7.1.2",
     "Flake8-pyproject==1.2.3",
     "pylint==3.3.5",

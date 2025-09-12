@@ -21,6 +21,10 @@ def courses_page() -> rx.Component:
 
     return rx.vstack(
         get_menu(),
+        rx.button(
+            "Download",
+            on_click=rx.download(url="/images/ericsson_logo.png"),
+        ),
         rx.vstack(
             rx.box(height="2em"),
             course_card(
@@ -43,7 +47,7 @@ def courses_page() -> rx.Component:
                 " of a line leader, project manager, or technical expert, leading,"
                 " engaging, and developing participants in formal or project teams.",
                 "",
-                "/images/leaders_core_curriculum.jpeg",
+                "/files/leaders_core_curriculum.jpeg",
             ),
             course_card(
                 "Machine Learning Experienced",

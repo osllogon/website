@@ -15,8 +15,29 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
     """
 
     # Define button
-    if url != "":
-        button: rx.Component = rx.link(
+    button: rx.Component
+    if url == "":
+        button = rx.button(
+            rx.icon(icon_name),
+            text,
+            size="3",
+            variant="surface",
+            color_scheme=color,  # type: ignore
+        )
+
+    elif url[0] == "/":
+        button = rx.button(
+            rx.icon(icon_name),
+            text,
+            size="3",
+            variant="surface",
+            color_scheme=color,  # type: ignore
+            cursor="pointer",
+            on_click=rx.download(url=url),
+        )
+
+    else:
+        button = rx.link(
             rx.button(
                 rx.icon(icon_name),
                 text,
@@ -26,15 +47,6 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
                 cursor="pointer",
             ),
             href=url,
-        )
-
-    else:
-        button = rx.button(
-            rx.icon(icon_name),
-            text,
-            size="3",
-            variant="surface",
-            color_scheme=color,  # type: ignore
         )
 
     return button
@@ -129,7 +141,7 @@ def get_course_buttons(url: str, path: str) -> list[rx.Component]:
     if path != "":
         buttons.append(
             get_special_button(
-                "Path",
+                "File",
                 "presentation",
                 path,
                 "indigo",
