@@ -26,11 +26,6 @@ jobs:
         run: uv lock --frozen
       - name: Build reflex page
         run: uv run reflex export --frontend-only --no-zip
-      - name: Install dependencies in .web
-        run: |
-          cd .web
-          npm install
-          npm run export
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Add vercel.json for static deployment
