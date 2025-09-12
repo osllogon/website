@@ -23,9 +23,11 @@ def get_menu() -> rx.Component:
     menu: rx.Component = rx.box(
         rx.hstack(
             navbar_icons_item("Home", "home", "/#"),
-            navbar_icons_item("Experience", "book-open", "/experience"),
+            navbar_icons_item("Experience", "cog", "/experience"),
+            navbar_icons_item("Education", "university", "/education"),
             navbar_icons_item("Publications", "flask-conical", "/publications"),
             navbar_icons_item("Talks", "mic-vocal", "/talks"),
+            navbar_icons_item("Courses", "monitor-cog", "/courses"),
             spacing="6",
             justify="center",
         ),
