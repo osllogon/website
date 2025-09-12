@@ -30,9 +30,10 @@ jobs:
         run: |
           cd .web
           npm install
+          npm run export
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to Vercel
         run: |
-          cd .web
+          cd .web/build/client
           vercel --prod --yes --token $VERCEL_TOKEN
