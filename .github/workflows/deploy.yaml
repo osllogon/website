@@ -35,5 +35,4 @@ jobs:
         run: npm install --global vercel@latest
       - name: Upload to Vercel
         run: |
-          cd .web/build/client
           npx vercel .web/build/client --prod --yes --token $VERCEL_TOKEN
