@@ -36,4 +36,4 @@ jobs:
       - name: Upload to Vercel
         run: |
           cd .web/build/client
-          vercel --prod --yes --token $VERCEL_TOKEN
+          npx vercel --prod --yes --token $VERCEL_TOKEN
