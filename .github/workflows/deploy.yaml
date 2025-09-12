@@ -33,6 +33,16 @@ jobs:
           npm run export
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
+      - name: Add vercel.json for static deployment
+        run: |
+          cat > .web/build/client/vercel.json << 'EOF'
+          {
+            "version": 2,
+            "builds": [
+              { "src": "**/*", "use": "@vercel/static" }
+            ]
+          }
+          EOF
       - name: Upload to Vercel
         run: |
-          npx vercel --prod --yes --token $VERCEL_TOKEN --cwd .web/build/client --force
+          npx vercel --prod --yes --token $VERCEL_TOKEN --cwd .web/build/client
