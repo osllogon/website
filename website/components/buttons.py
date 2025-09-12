@@ -25,16 +25,16 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
             color_scheme=color,  # type: ignore
         )
 
-    elif url[0] == "/":
-        button = rx.button(
-            rx.icon(icon_name),
-            text,
-            size="3",
-            variant="surface",
-            color_scheme=color,  # type: ignore
-            cursor="pointer",
-            on_click=rx.download(url=url),
-        )
+    # elif url[0] == "/":
+    #     button = rx.button(
+    #         rx.icon(icon_name),
+    #         text,
+    #         size="3",
+    #         variant="surface",
+    #         color_scheme=color,  # type: ignore
+    #         cursor="pointer",
+    #         on_click=rx.download(url=url),
+    #     )
 
     else:
         button = rx.link(
