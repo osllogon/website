@@ -10,8 +10,15 @@ from website.components.menu import get_menu
 from website.components.cards import publication_card
 
 
-@rx.page(route="/publications", title="Oscar Llorente | Publications")
+@rx.page(route="/publications", title="Oscar Llorente | Publications")  # type: ignore
 def publications_page() -> rx.Component:
+    """
+    This function defines the publications page.
+
+    Returns:
+        Stack of elements for the page.
+    """
+
     return rx.vstack(
         get_menu(),
         rx.vstack(
