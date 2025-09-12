@@ -3,6 +3,18 @@ import reflex as rx
 
 
 def navbar_icons_item(text: str, icon: str, url: str) -> rx.Component:
+    """
+    This function created the icons to be used in the menu.
+
+    Args:
+        text: Text of the item.
+        icon: Icon to use.
+        url: Url of the page.
+
+    Returns:
+        Link element to be used in the menu.
+    """
+
     return rx.link(
         rx.hstack(
             rx.icon(icon),

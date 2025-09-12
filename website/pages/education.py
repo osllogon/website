@@ -10,7 +10,7 @@ from website.components.menu import get_menu
 from website.components.cards import education_card
 
 
-@rx.page(route="/education", title="Oscar Llorente | Education")
+@rx.page(route="/education", title="Oscar Llorente | Education")  # type: ignore
 def education_page() -> rx.Component:
     """
     This function defines the home page of the website.

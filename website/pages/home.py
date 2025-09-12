@@ -10,7 +10,7 @@ from website.components.menu import get_menu
 from website.components.buttons import get_special_button
 
 
-@rx.page(route="/", title="Oscar Llorente | Home")
+@rx.page(route="/", title="Oscar Llorente | Home")  # type: ignore
 def home_page() -> rx.Component:
     """
     This function defines the home page of the website.
