@@ -35,7 +35,7 @@ def education_page() -> rx.Component:
                 ],
             ),
             education_card(
-                "Master of Science, Artificial Intelligence",
+                "Master of Science - MS, Artificial Intelligence",
                 "University of Carlos III of Madrid",
                 "Sep 2022 - Sep 2024",
                 "/images/carlos_logo.png",

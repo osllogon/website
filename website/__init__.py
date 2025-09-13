@@ -3,7 +3,7 @@ from website.pages.experience import experience_page
 from website.pages.education import education_page
 from website.pages.publications import publications_page
 from website.pages.talks import talks_page
-from website.pages.courses import courses_page
+from website.pages.certifications import certifications_page
 
 __all__: list[str] = [
     "home_page",
@@ -11,5 +11,5 @@ __all__: list[str] = [
     "education_page",
     "publications_page",
     "talks_page",
-    "courses_page",
+    "certifications_page",
 ]

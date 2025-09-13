@@ -39,7 +39,7 @@ def get_menu() -> rx.Component:
             navbar_icons_item("Education", "university", "/education"),
             navbar_icons_item("Publications", "flask-conical", "/publications"),
             navbar_icons_item("Talks", "mic-vocal", "/talks"),
-            navbar_icons_item("Courses", "monitor-cog", "/courses"),
+            navbar_icons_item("Certifications", "monitor-cog", "/certifications"),
             spacing="6",
             justify="center",
         ),

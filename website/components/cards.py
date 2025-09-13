@@ -275,7 +275,7 @@ def get_description_experience(introduction: str, bullets: list[str]) -> rx.Comp
     )
 
 
-def course_card(
+def certification_card(
     title: str,
     company: str,
     date: str,

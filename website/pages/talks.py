@@ -37,7 +37,7 @@ def talks_page() -> rx.Component:
                 " cellular networks.",
                 "https://www.youtube.com/live/JE1W22_XdEc?si=V2_i58-xFy8ymvKO&t=3385",
                 "https://guild.host/events/embeddings-para-contratacin-306046050",
-                "files/pydata_feb_2025.pptx",
+                "/files/pydata_feb_2025.pptx",
                 "Spanish",
             ),
             talk_card(
