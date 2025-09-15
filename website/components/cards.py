@@ -36,7 +36,7 @@ def experience_card(
         Card for experience section.
     """
 
-    return rx.hstack(
+    return rx.stack(
         rx.box(
             rx.center(
                 rx.image(
@@ -46,7 +46,8 @@ def experience_card(
                     max_height="10em",
                 ),
             ),
-            width="25%",
+            width=rx.breakpoints(initial="75%", xs="75%", sm="75%", md="25%", lg="25%"),
+            padding=rx.breakpoints(initial="5%", xs="5%", sm="5%", md="0%", lg="0%"),
         ),
         rx.vstack(
             rx.heading(title, size="4"),
@@ -55,8 +56,11 @@ def experience_card(
             align="start",
             width="75%",
         ),
-        width="50%",
-        spacing="9",
+        direction=rx.breakpoints(
+            initial="column", xs="column", sm="column", md="row", lg="row"
+        ),
+        width=rx.breakpoints(initial="90%", xs="90%", sm="90%", md="50%", lg="50%"),
+        spacing=rx.breakpoints(initial="3", xs="3", sm="3", md="9", lg="9"),
         border_top=f"1.5px solid {rx.color('violet', 6)}",
         padding="2%",
         align_items="center",
@@ -86,7 +90,7 @@ def education_card(
         Card for experience section.
     """
 
-    return rx.hstack(
+    return rx.stack(
         rx.box(
             rx.center(
                 rx.image(
@@ -96,7 +100,8 @@ def education_card(
                     max_height="10em",
                 ),
             ),
-            width="25%",
+            width=rx.breakpoints(initial="75%", xs="75%", sm="75%", md="25%", lg="25%"),
+            padding=rx.breakpoints(initial="5%", xs="5%", sm="5%", md="0%", lg="0%"),
         ),
         rx.vstack(
             rx.heading(title, size="4"),
@@ -105,8 +110,11 @@ def education_card(
             align="start",
             width="75%",
         ),
-        width="50%",
-        spacing="9",
+        direction=rx.breakpoints(
+            initial="column", xs="column", sm="column", md="row", lg="row"
+        ),
+        width=rx.breakpoints(initial="90%", xs="90%", sm="90%", md="50%", lg="50%"),
+        spacing=rx.breakpoints(initial="3", xs="3", sm="3", md="9", lg="9"),
         border_top=f"1.5px solid {rx.color('violet', 6)}",
         padding="2%",
         align_items="center",
@@ -136,7 +144,7 @@ def publication_card(
         Card for publications section.
     """
 
-    return rx.hstack(
+    return rx.stack(
         rx.box(
             rx.center(
                 rx.image(
@@ -146,7 +154,8 @@ def publication_card(
                     max_height="10em",
                 ),
             ),
-            width="25%",
+            width=rx.breakpoints(initial="75%", xs="75%", sm="75%", md="25%", lg="25%"),
+            padding=rx.breakpoints(initial="5%", xs="5%", sm="5%", md="0%", lg="0%"),
         ),
         rx.vstack(
             rx.heading(title, size="4"),
@@ -159,9 +168,15 @@ def publication_card(
                 rx.text(abstract, style={"text_align": "justify"}),  # type: ignore
                 type="always",
                 scrollbars="vertical",
-                style={"height": 180},  # type: ignore
+                style=rx.breakpoints(
+                    initial={"height": 270},
+                    xs={"height": 270},
+                    sm={"height": 270},
+                    md={"height": 180},
+                    lg={"height": 180},
+                ),  # type: ignore
             ),
-            rx.hstack(
+            rx.stack(
                 get_special_button(
                     "Manuscript",
                     "graduation-cap",
@@ -175,12 +190,22 @@ def publication_card(
                     "gray",
                 ),
                 margin_top="2%",
+                width="100%",
+                direction=rx.breakpoints(
+                    initial="column", xs="column", sm="column", md="row", lg="row"
+                ),
+                align_items=rx.breakpoints(
+                    initial="center", xs="center", sm="center", md="start", lg="start"
+                ),
             ),
             align="start",
             width="75%",
         ),
-        width="50%",
-        spacing="9",
+        direction=rx.breakpoints(
+            initial="column", xs="column", sm="column", md="row", lg="row"
+        ),
+        width=rx.breakpoints(initial="90%", xs="90%", sm="90%", md="50%", lg="50%"),
+        spacing=rx.breakpoints(initial="3", xs="3", sm="3", md="9", lg="9"),
         border_top=f"1.5px solid {rx.color('violet', 6)}",
         padding="2%",
         align_items="center",
@@ -213,7 +238,7 @@ def talk_card(
         Card for publications section.
     """
 
-    return rx.hstack(
+    return rx.stack(
         rx.box(
             rx.center(
                 rx.image(
@@ -223,7 +248,8 @@ def talk_card(
                     max_height="10em",
                 ),
             ),
-            width="25%",
+            width=rx.breakpoints(initial="75%", xs="75%", sm="75%", md="25%", lg="25%"),
+            padding=rx.breakpoints(initial="5%", xs="5%", sm="5%", md="0%", lg="0%"),
         ),
         rx.vstack(
             rx.heading(title, size="4"),
@@ -232,17 +258,33 @@ def talk_card(
                 rx.text(abstract, style={"text_align": "justify"}),  # type: ignore
                 type="always",
                 scrollbars="vertical",
-                style={"height": 180},  # type: ignore
+                style=rx.breakpoints(
+                    initial={"height": 270},
+                    xs={"height": 270},
+                    sm={"height": 270},
+                    md={"height": 180},
+                    lg={"height": 180},
+                ),
             ),
-            rx.hstack(
+            rx.stack(
                 *get_talk_buttons(recording_url, source_url, slides_path, language),
                 margin_top="2%",
+                width="100%",
+                direction=rx.breakpoints(
+                    initial="column", xs="column", sm="column", md="row", lg="row"
+                ),
+                align_items=rx.breakpoints(
+                    initial="center", xs="center", sm="center", md="start", lg="start"
+                ),
             ),
             align="start",
             width="75%",
         ),
-        width="50%",
-        spacing="9",
+        direction=rx.breakpoints(
+            initial="column", xs="column", sm="column", md="row", lg="row"
+        ),
+        width=rx.breakpoints(initial="90%", xs="90%", sm="90%", md="50%", lg="50%"),
+        spacing=rx.breakpoints(initial="3", xs="3", sm="3", md="9", lg="9"),
         border_top=f"1.5px solid {rx.color('violet', 6)}",
         padding="2%",
         align_items="center",
@@ -299,7 +341,7 @@ def certification_card(
         Card for experience section.
     """
 
-    return rx.hstack(
+    return rx.stack(
         rx.box(
             rx.center(
                 rx.image(
@@ -309,7 +351,8 @@ def certification_card(
                     max_height="10em",
                 ),
             ),
-            width="25%",
+            width=rx.breakpoints(initial="75%", xs="75%", sm="75%", md="25%", lg="25%"),
+            padding=rx.breakpoints(initial="5%", xs="5%", sm="5%", md="0%", lg="0%"),
         ),
         rx.vstack(
             rx.heading(title, size="4"),
@@ -327,8 +370,11 @@ def certification_card(
             align="start",
             width="75%",
         ),
-        width="50%",
-        spacing="9",
+        direction=rx.breakpoints(
+            initial="column", xs="column", sm="column", md="row", lg="row"
+        ),
+        width=rx.breakpoints(initial="90%", xs="90%", sm="90%", md="50%", lg="50%"),
+        spacing=rx.breakpoints(initial="3", xs="3", sm="3", md="9", lg="9"),
         border_top=f"1.5px solid {rx.color('violet', 6)}",
         padding="2%",
         align_items="center",

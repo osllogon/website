@@ -1,3 +1,7 @@
+"""
+This module defines the menu.
+"""
+
 # 3pps
 import reflex as rx
 
@@ -16,9 +20,13 @@ def navbar_icons_item(text: str, icon: str, url: str) -> rx.Component:
     """
 
     return rx.link(
-        rx.hstack(
-            rx.icon(icon),
-            rx.text(text, size="4", weight="medium"),
+        rx.stack(
+            rx.mobile_and_tablet(rx.icon(icon, size=32)),
+            rx.desktop_only(rx.icon(icon)),
+            rx.desktop_only(rx.text(text, size="4", weight="medium")),
+            direction=rx.breakpoints(
+                initial="column", xs="column", sm="column", md="row", lg="row"
+            ),
         ),
         href=url,
     )

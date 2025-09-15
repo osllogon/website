@@ -21,7 +21,7 @@ def home_page() -> rx.Component:
 
     return rx.vstack(
         get_menu(),
-        rx.hstack(
+        rx.stack(
             rx.vstack(
                 rx.flex(
                     rx.image(
@@ -34,7 +34,7 @@ def home_page() -> rx.Component:
                     align="center",
                     width="100%",
                 ),
-                rx.hstack(
+                rx.stack(
                     get_special_button(
                         "Linkedin",
                         "linkedin",
@@ -66,8 +66,13 @@ def home_page() -> rx.Component:
                     justify="center",
                     align="center",
                     width="100%",
+                    direction=rx.breakpoints(
+                        initial="column", xs="column", sm="column", md="row", lg="row"
+                    ),
                 ),
-                width="50%",
+                width=rx.breakpoints(
+                    initial="100%", xs="100%", sm="100%", md="50%", lg="50%"
+                ),
             ),
             rx.card(
                 rx.vstack(
@@ -108,12 +113,21 @@ def home_page() -> rx.Component:
                 ),
                 size="5",
                 margin_top="3em",
-                width="40%",
-                justify="start",
+                width=rx.breakpoints(
+                    initial="95%", xs="95%", sm="80%", md="40%", lg="40%"
+                ),
                 style={  # type: ignore
                     "text_align": "justify",
                 },
+                padding=rx.breakpoints(
+                    initial="5%", xs="5%", sm="2%", md="2%", lg="2%"
+                ),
             ),
-            width="100%",
+            direction=rx.breakpoints(
+                initial="column", xs="column", sm="column", md="row", lg="row"
+            ),
+            align_items=rx.breakpoints(
+                initial="center", xs="center", sm="center", md="start", lg="start"
+            ),
         ),
     )
