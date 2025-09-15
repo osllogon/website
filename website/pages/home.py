@@ -79,7 +79,7 @@ def home_page() -> rx.Component:
                     rx.heading("About me"),
                     rx.text(
                         "Hello there, and I am just a curious person who wants to"
-                        " contribute with something meaningful.",
+                        " contribute with something meaningful."
                     ),
                     rx.text(
                         "Now, about my work, currently I am a Senior Data Scientist at"
@@ -98,7 +98,7 @@ def home_page() -> rx.Component:
                         " founders of Ericsson Cognitive Labs, our open-source"
                         " initiative to release part of our research open-source. There"
                         " I am the Head of the Geometric Artificial Intelligence (GAI)"
-                        " Lab, which is specially focused in Graph Neural Networks.",
+                        " Lab, which is specially focused in Graph Neural Networks."
                     ),
                     rx.text(
                         "Then, outside Ericsson I also work as an Adjunct Professor at"
@@ -108,7 +108,7 @@ def home_page() -> rx.Component:
                         " students will think for sure that I am too hard (maybe they"
                         " use other terms to explain it...), I view this as an"
                         " opportunity to give back to the community, which is the duty"
-                        " I think we all have.",
+                        " I think we all have."
                     ),
                 ),
                 size="5",
@@ -119,12 +119,13 @@ def home_page() -> rx.Component:
                 style={  # type: ignore
                     "text_align": "justify",
                 },
-                padding=rx.breakpoints(initial="5%", xs="5%"),
+                padding=rx.breakpoints(
+                    initial="5%", xs="5%", sm="2%", md="2%", lg="2%"
+                ),
             ),
             direction=rx.breakpoints(
                 initial="column", xs="column", sm="column", md="row", lg="row"
             ),
-            width="100%",
             align_items=rx.breakpoints(
                 initial="center", xs="center", sm="center", md="start", lg="start"
             ),
