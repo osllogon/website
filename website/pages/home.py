@@ -114,7 +114,7 @@ def home_page() -> rx.Component:
                 size="5",
                 margin_top="3em",
                 width=rx.breakpoints(
-                    initial="80%", xs="80%", sm="80%", md="40%", lg="40%"
+                    initial="95%", xs="95%", sm="80%", md="40%", lg="40%"
                 ),
                 style={  # type: ignore
                     "text_align": "justify",
