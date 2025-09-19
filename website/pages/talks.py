@@ -24,6 +24,26 @@ def talks_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             talk_card(
+                "Bayesian Neural Networks",
+                "PyData Madrid",
+                "Sep 2025",
+                "/images/pydata_logo.png",
+                "Neural Networks (NNs) have demonstrated in the last few years that"
+                " they can achieve a remarkable performance for many different use"
+                " cases. However, with this type of model, we do not have any"
+                " probabilistic notion, so we cannot estimate uncertainty or give"
+                " confidence intervals. In this talk, a way to transform vanilla NNs"
+                " into Bayesian NNs (BNNs) is presented, explaining how they work and"
+                " can be applied, discussing their advantages and limitations."
+                " Moreover, it is also described how they can be combined with Graph"
+                " Neural Networks (GNNs)with a real use case of optimization in the"
+                " telecom network.",
+                "https://www.youtube.com/live/nNA1CLegdc0?si=WemmwyNz_NfHnmla&t=3255",
+                "https://guild.host/events/web-scraping-polglota-guc54i",
+                "/files/pydata_sep_2025.pptx",
+                "Spanish",
+            ),
+            talk_card(
                 "How to use Graph Neural Networks to optimize telecommunications"
                 " networks",
                 "PyData Madrid",
