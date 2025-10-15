@@ -7,7 +7,7 @@ import reflex as rx
 
 # Own modules
 from website.components.buttons import (
-    get_special_button,
+    get_publications_buttons,
     get_talk_buttons,
     get_course_buttons,
 )
@@ -125,9 +125,10 @@ def publication_card(
     title: str,
     authors: list[str],
     abstract: str,
-    paper_url: str,
-    github_url: str,
     logo_path: str,
+    paper_url: str = "",
+    github_url: str = "",
+    patent_url: str = "",
 ) -> rx.Component:
     """
     This function creates a card for the publications section.
@@ -136,9 +137,10 @@ def publication_card(
         title: Title of the publication.
         authors: List with the names of the authors.
         abstract: Text with the abstract of the publication.
-        paper_url: Link to the publication.
-        github_url: Link to the source code in GitHub.
         logo_path: Path of the logo to use in the card.
+        paper_url: Link to the publication. Defaults to ''.
+        github_url: Link to the source code in GitHub. Defaults to ''.
+        patent_url: Link to the patent application. Defaults to ''.
 
     Returns:
         Card for publications section.
@@ -160,7 +162,7 @@ def publication_card(
         rx.vstack(
             rx.heading(title, size="4"),
             rx.text(
-                f"{','.join(author for author in authors)}",
+                f"{', '.join(author for author in authors)}",
                 font_weight="bold",
                 color="gray",
             ),
@@ -177,18 +179,7 @@ def publication_card(
                 ),  # type: ignore
             ),
             rx.stack(
-                get_special_button(
-                    "Manuscript",
-                    "graduation-cap",
-                    paper_url,
-                    "amber",
-                ),
-                get_special_button(
-                    "Source Code",
-                    "github",
-                    github_url,
-                    "gray",
-                ),
+                get_publications_buttons(paper_url, github_url, patent_url),
                 margin_top="2%",
                 width="100%",
                 direction=rx.breakpoints(

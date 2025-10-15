@@ -24,6 +24,32 @@ def publications_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             publication_card(
+                "Methods and Apparatuses for using a Graph Neural Network to Determine"
+                " Recommended Configurations for a Plurality of Nodes",
+                [
+                    "Oscar Llorente",
+                    "Rana Fawzy",
+                    "Victor Buenestado",
+                    "Anderson Falci",
+                    "Raul Martin Cuerdo",
+                ],
+                "Embodiments described herein relate to methods and apparatuses for"
+                " using a Bayesian graph neural network, B-GNN, to determine"
+                " recommended configurations for a plurality of nodes, wherein the"
+                " B-GNN comprises the plurality of nodes and a plurality of edges, and"
+                " wherein the B-GNN is trained to predict the one or more performance"
+                " metrics associated with the plurality of nodes based on"
+                " configurations applied to the plurality of nodes. A computer"
+                " implemented method comprises performing an optimization process"
+                " utilizing the B-GNN based on a process execution type to determine"
+                " the recommended configurations for the plurality of nodes.",
+                "/images/wipo_logo.png",
+                "",
+                "",
+                "https://patentscope.wipo.int/search/en/detail.jsf?"
+                "docId=WO2025090007&_cid=P20-MA6791-81263-18",
+            ),
+            publication_card(
                 "Evaluating Neighbor Explainability for Graph Neural Networks",
                 [
                     "Oscar Llorente",
@@ -56,9 +82,9 @@ def publications_page() -> rx.Component:
                 " to identify important neighbors when GNNs without self-loops are used"
                 " (The code to replicate our findings will be available here:"
                 " https://github.com/EricssonResearch/gnn-neighbors-xai).",
+                "/images/springer_logo.png",
                 "https://link.springer.com/chapter/10.1007/978-3-031-63787-2_20",
                 "https://github.com/EricssonResearch/gnn-neighbors-xai",
-                "/images/springer_logo.png",
             ),
             publication_card(
                 "A matter of attitude: Focusing on positive and active gradients to"
@@ -78,9 +104,9 @@ def publications_page() -> rx.Component:
                 " the network is really focusing on. Furthermore, how occluding or"
                 " altering those pixels is expected to affect the outcome also becomes"
                 " clearer.",
+                "/images/arxiv_logo.png",
                 "https://arxiv.org/abs/2309.12913",
                 "https://github.com/osllogon/positive_active_saliency_maps",
-                "/images/arxiv_logo.png",
             ),
             publication_card(
                 "A Transformer approach for Electricity Price Forecasting",
@@ -95,9 +121,9 @@ def publications_page() -> rx.Component:
                 " research. The results show that the Transformer model outperforms"
                 " traditional methods, offering a promising solution for reliable and"
                 " sustainable power system operation.",
+                "/images/arxiv_logo.png",
                 "https://arxiv.org/abs/2403.16108",
                 "https://github.com/osllogon/epf-transformers",
-                "/images/arxiv_logo.png",
             ),
             width="100%",
             spacing="0",

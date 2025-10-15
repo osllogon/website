@@ -52,6 +52,60 @@ def get_special_button(text: str, icon_name: str, url: str, color: str) -> rx.Co
     return button
 
 
+def get_publications_buttons(
+    paper_url: str,
+    github_url: str,
+    patent_url: str,
+) -> list[rx.Component]:
+    """
+    This function gets the buttons for the talks page.
+
+    Args:
+        recording_url: Url of the recording.
+        source_url: Source of the talk.
+        slides_path: Path of the slides used in the talk.
+        language: Language the talk was given.
+
+    Returns:
+        List of components.
+    """
+
+    # Init buttons list
+    buttons: list[rx.Component] = []
+
+    if paper_url != "":
+        buttons.append(
+            get_special_button(
+                "Manuscript",
+                "graduation-cap",
+                paper_url,
+                "amber",
+            ),
+        )
+
+    if github_url != "":
+        buttons.append(
+            get_special_button(
+                "Source Code",
+                "github",
+                github_url,
+                "gray",
+            ),
+        )
+
+    if patent_url != "":
+        buttons.append(
+            get_special_button(
+                "Patent: Filed",
+                "scroll-text",
+                patent_url,
+                "jade",
+            ),
+        )
+
+    return buttons
+
+
 def get_talk_buttons(
     recording_url: str, source_url: str, slides_path: str, language: str
 ) -> list[rx.Component]:
