@@ -1,0 +1,4 @@
+.rx-connection-error,
+[data-rx-connection-error] {
+  display: none !important;
+}

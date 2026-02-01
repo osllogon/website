@@ -11,6 +11,7 @@ style = {
 }
 stylesheets = [
     "css/font.css",
+    "css/style.css"
 ]
 
 
