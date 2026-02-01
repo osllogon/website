@@ -26,9 +26,29 @@ jobs:
         run: uv lock --frozen
       - name: Build reflex page
         run: uv run reflex export --frontend-only --no-zip
+      - name: Create Vercel config for static deploy
+        run: |
+          cat << 'EOF' > .web/build/client/vercel.json
+          {
+            "framework": null,
+            "builds": [
+              {
+                "src": "**/*",
+                "use": "@vercel/static"
+              }
+            ],
+            "routes": [
+              {
+                "src": "/(.*)",
+                "dest": "/_spa-fallback.html"
+              }
+            ]
+          }
+          EOF
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to Vercel
         run: |
           cd .web/build/client/
+          ls -la .
           vercel --prod --yes --token $VERCEL_TOKEN
