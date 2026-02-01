@@ -1,4 +1,8 @@
 {
-  "framework": null,
-  "outputDirectory": ".web/build"
+  "builds": [
+    {
+      "src": "**/*",
+      "use": "@vercel/static"
+    }
+  ]
 }
