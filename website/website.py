@@ -9,10 +9,7 @@ import reflex as rx
 style = {
     "font_family": "JetBrains Mono",
 }
-stylesheets = [
-    "css/font.css",
-    "css/style.css"
-]
+stylesheets = ["css/font.css", "css/style.css"]
 
 
 app = rx.App(
