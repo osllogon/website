@@ -24,6 +24,37 @@ def publications_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             publication_card(
+                "Parallelizing Node-Level Explainability in Graph Neural Networks",
+                [
+                    "Oscar Llorente",
+                    "Jaime Boal",
+                    "Eugenio F. Sánchez-Úbeda",
+                    "Antonio Diaz-Cano",
+                    "Miguel Familiar",
+                ],
+                "Graph Neural Networks (GNNs) have demonstrated remarkable performance"
+                " in a wide range of tasks, such as node classification, link"
+                " prediction, and graph classification, by exploiting the structural"
+                " information in graph-structured data. However, in node"
+                " classification, computing node-level explainability becomes extremely"
+                " time-consuming as the size of the graph increases, while batching"
+                " strategies often degrade explanation quality. This paper introduces a"
+                " novel approach to parallelizing node-level explainability in GNNs"
+                " through graph partitioning. By decomposing the graph into disjoint"
+                " subgraphs, we enable parallel computation of explainability for node"
+                " neighbors, significantly improving the scalability and efficiency"
+                " without affecting the correctness of the results, provided sufficient"
+                " memory is available. For scenarios where memory is limited, we"
+                " further propose a dropout-based reconstruction mechanism that offers"
+                " a controllable trade-off between memory usage and explanation"
+                " fidelity. Experimental results on real-world datasets demonstrate"
+                " substantial speedups, enabling scalable and transparent"
+                " explainability for large-scale GNN models.",
+                "/images/arxiv_logo.png",
+                "https://arxiv.org/abs/2601.04807",
+                "https://github.com/EricssonResearch/parallel-xai-gnn",
+            ),
+            publication_card(
                 "Methods and Apparatuses for using a Graph Neural Network to Determine"
                 " Recommended Configurations for a Plurality of Nodes",
                 [
