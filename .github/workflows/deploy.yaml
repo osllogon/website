@@ -24,11 +24,33 @@ jobs:
           pyproject-file: ${{ env.TOML_PATH }}
       - name: Install dependencies
         run: uv lock --frozen
+      - name: Set Reflex to production mode
+        run: echo "REFLEX_ENV_MODE=prod" >> $GITHUB_ENV
       - name: Build reflex page
         run: uv run reflex export --frontend-only --no-zip
+      - name: Create Vercel config for static deploy
+        run: |
+          cat << 'EOF' > .web/build/client/vercel.json
+          {
+            "framework": null,
+            "builds": [
+              {
+                "src": "**/*",
+                "use": "@vercel/static"
+              }
+            ],
+            "routes": [
+              {
+                "src": "/(.*)",
+                "dest": "/_spa-fallback.html"
+              }
+            ]
+          }
+          EOF
       - name: Install Vercel CLI
         run: npm install --global vercel@latest
       - name: Upload to Vercel
         run: |
-          cd .web
+          cd .web/build/client/
+          ls -la .
           vercel --prod --yes --token $VERCEL_TOKEN
