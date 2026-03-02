@@ -24,22 +24,15 @@ def experience_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             experience_card(
-                "Senior Data Scientist",
+                "Staff Data Scientist",
                 "Ericsson",
-                "Jan 2024 - Present",
+                "Jan 2026 - Present",
                 "/images/ericsson_logo.png",
-                "Data Scientist at Ericsson Cognitive Network Solutions (JS6):",
+                "Data Scientist at Ericsson Cognitive Network Solutions (JS7):",
                 [
-                    (
-                        "Member of the Data Science Board, group of experts who manage "
-                        "Machine Learning in the organization."
-                    ),
-                    "Head of the Geometric Artificial Intelligence (GAI) Lab.",
-                    (
-                        "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
-                        "telecommunications network optimizer that improves the "
-                        "uplink interference with Graph Neural Networks."
-                    ),
+                    "Lead Machine Learning Scientist for Research organization of +70.",
+                    "Founder and Head of Ericsson Cognitive Labs.",
+                    "Expert for Machine Learning certifications in +30k organization.",
                 ],
             ),
             experience_card(
@@ -50,9 +43,26 @@ def experience_page() -> rx.Component:
                 "Bachelor of Engineering, Mathematical Engineering & Artificial"
                 " Intelligence (iMAT):",
                 [
+                    "Deep Learning, Theory & Lab Professor (2024-2026).",
                     "Computer Vision II, Theory & Lab Professor (2024).",
-                    "Deep Learning, Theory & Lab Professor (2024-2025).",
                     "Natural Language Processing (NLP), Lab Professor (2024).",
+                ],
+            ),
+            experience_card(
+                "Senior Data Scientist",
+                "Ericsson",
+                "Jan 2024 - Jan 2026",
+                "/images/ericsson_logo.png",
+                "Data Scientist at Ericsson Cognitive Network Solutions (JS6):",
+                [
+                    (
+                        "Member of the Data Science Board, group of experts who manage "
+                        "Machine Learning in the organization."
+                    ),
+                    (
+                        "Top Performance Award (TPC), most prestigious recognition at"
+                        " Ericsson."
+                    ),
                 ],
             ),
             experience_card(
