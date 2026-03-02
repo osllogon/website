@@ -26,7 +26,7 @@ def experience_page() -> rx.Component:
             experience_card(
                 "Staff Data Scientist",
                 "Ericsson",
-                "Jan 2026 - Present",
+                "Feb 2026 - Present",
                 "/images/ericsson_logo.png",
                 "Data Scientist at Ericsson Cognitive Network Solutions (JS7):",
                 [
