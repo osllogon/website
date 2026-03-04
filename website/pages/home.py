@@ -51,9 +51,9 @@ def home_page() -> rx.Component:
                         "amber",
                     ),
                     get_special_button(
-                        "Gmail",
-                        "mail",
-                        "mailto:oscar.llorente.gonzalez@ericsson.com",
+                        "YouTube",
+                        "youtube",
+                        "https://www.youtube.com/@osllogon",
                         "red",
                     ),
                     get_special_button(
