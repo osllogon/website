@@ -57,7 +57,7 @@ def home_page() -> rx.Component:
                         "red",
                     ),
                     get_special_button(
-                        "Outlook",
+                        "Mail",
                         "mail",
                         "mailto:oscar.llorente.gonzalez@ericsson.com",
                         "indigo",
@@ -82,7 +82,7 @@ def home_page() -> rx.Component:
                         " contribute with something meaningful."
                     ),
                     rx.text(
-                        "Now, about my work, currently I am a Senior Data Scientist at"
+                        "Now, about my work, currently I am a Staff Data Scientist at"
                         " Ericsson. Specifically, I work in a department called"
                         " Cognitive Network Solutions that uses AI to diagnose"
                         " the different problems of cellular networks and optimizes"
