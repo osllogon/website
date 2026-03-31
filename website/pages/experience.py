@@ -40,12 +40,15 @@ def experience_page() -> rx.Component:
                 "Comillas Pontifical University (ICAI)",
                 "Jan 2024 - Present",
                 "/images/icai_logo.png",
-                "Bachelor of Engineering, Mathematical Engineering & Artificial"
-                " Intelligence (iMAT):",
+                "Course Coordinator and Professor of the 'Deep Learning' Course in the"
+                " Mathematical & Artificial Intelligence Degree (iMAT). Past Courses:",
                 [
-                    "Deep Learning, Theory & Lab Professor (2024-2026).",
-                    "Computer Vision II, Theory & Lab Professor (2024).",
-                    "Natural Language Processing (NLP), Lab Professor (2024).",
+                    (
+                        "Deep Learning, Theory & Lab Professor (2025), Master of"
+                        " Intelligent Industry."
+                    ),
+                    "Computer Vision II, Theory & Lab Professor (2024), iMAT.",
+                    "Natural Language Processing (NLP), Lab Professor (2024), iMAT.",
                 ],
             ),
             experience_card(
