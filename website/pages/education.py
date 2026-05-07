@@ -24,7 +24,7 @@ def education_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             education_card(
-                "Doctor of Philosophy - PhD, Artificial Intelligence",
+                "Doctor of Philosophy - PhD, Computer Science",
                 "Comillas Pontifical University",
                 "Jan 2024 - Present",
                 "/images/icai_logo.png",
