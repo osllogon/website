@@ -30,7 +30,10 @@ def education_page() -> rx.Component:
                 "/images/icai_logo.png",
                 "",
                 [
-                    "Thesis: Explainability in Graph Neural Networks",
+                    (
+                        "Thesis: Scalable Post-hoc Explainability for Graph Neural"
+                        " Networks"
+                    ),
                     "Collaboration: Ericsson Cognitive Labs",
                 ],
             ),
@@ -64,7 +67,7 @@ def education_page() -> rx.Component:
                         "neural networks"
                     ),
                     (
-                        "Business Analytics: Electricity Price Forecasting with "
+                        "Business Analytics Thesis: Electricity Price Forecasting with "
                         "Transformers"
                     ),
                     "EY Accésit for Business Analytics Thesis",
