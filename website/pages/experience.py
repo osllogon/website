@@ -28,7 +28,7 @@ def experience_page() -> rx.Component:
                 "Ericsson",
                 "Feb 2026 - Present",
                 "/images/ericsson_logo.png",
-                "Data Scientist at Ericsson Cognitive Network Solutions (JS7):",
+                "Data Scientist at Ericsson Cognitive Software Engineering (JS7):",
                 [
                     "Lead Machine Learning Scientist for Research organization of +70.",
                     "Founder and Head of Ericsson Cognitive Labs.",
@@ -56,7 +56,7 @@ def experience_page() -> rx.Component:
                 "Ericsson",
                 "Jan 2024 - Jan 2026",
                 "/images/ericsson_logo.png",
-                "Data Scientist at Ericsson Cognitive Network Solutions (JS6):",
+                "Data Scientist at Ericsson Cognitive Software Engineering (JS6):",
                 [
                     (
                         "Member of the Data Science Board, group of experts who manage "
@@ -73,7 +73,7 @@ def experience_page() -> rx.Component:
                 "Ericsson",
                 "Jun 2023 - Dec 2023",
                 "/images/ericsson_logo.png",
-                "Data Scientist at Ericsson Cognitive Network Solutions (JS5):",
+                "Data Scientist at Ericsson Cognitive Software Engineering (JS5):",
                 [
                     (
                         "Machine Learning Lead of the Uplink Optimizer 4G and 5G, "
@@ -87,7 +87,7 @@ def experience_page() -> rx.Component:
                 "Ericsson",
                 "Jun 2022 - May 2023",
                 "/images/ericsson_logo.png",
-                "Data Scientist at Ericsson Cognitive Network Solutions (JS4):",
+                "Data Scientist at Ericsson Cognitive Software Engineering (JS4):",
                 [
                     (
                         "Data Scientist in Uplink Optimizer, telecommunications network"
