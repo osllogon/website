@@ -16,4 +16,7 @@ app = rx.App(
     theme=rx.theme(appearance="dark", accent_color="violet"),
     style=style,  # type: ignore
     stylesheets=stylesheets,
+    head_components=[
+        rx.el.link(rel="icon", href="/favicon.png", type="image/png"),
+    ],
 )
