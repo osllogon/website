@@ -25,7 +25,7 @@ def education_page() -> rx.Component:
             rx.box(height="2em"),
             education_card(
                 "Doctor of Philosophy - PhD, Computer Science",
-                "Comillas Pontifical University",
+                "Comillas Pontifical University (ICAI)",
                 "Jan 2024 - Present",
                 "/images/icai_logo.png",
                 "",
@@ -39,7 +39,7 @@ def education_page() -> rx.Component:
             ),
             education_card(
                 "Master of Science - MS, Artificial Intelligence",
-                "University of Carlos III of Madrid",
+                "Carlos III University of Madrid",
                 "Sep 2022 - Sep 2024",
                 "/images/carlos_logo.png",
                 "",
@@ -56,7 +56,7 @@ def education_page() -> rx.Component:
             education_card(
                 "Double Bachelor of Engineering - BE, Telecommunications "
                 "Engineering & Business Analytics",
-                "Comillas Pontifical University",
+                "Comillas Pontifical University (ICAI)",
                 "Sep 2017 - Jun 2022",
                 "/images/icai_logo.png",
                 "",
