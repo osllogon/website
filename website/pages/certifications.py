@@ -24,6 +24,20 @@ def certifications_page() -> rx.Component:
         rx.vstack(
             rx.box(height="2em"),
             certification_card(
+                "PyTorch for Deep Learning Professional Certificate",
+                "DeepLearning.AI",
+                "Oct 2026",
+                "/images/deeplearning_logo.webp",
+                "The PyTorch for Deep Learning Professional Certificate teaches you how"
+                " to build, train, optimize, and deploy deep learning models using the"
+                " PyTorch framework. Through three progressively structured courses,"
+                " you'll move from the fundamentals of PyTorch and neural networks to"
+                " advanced architectures and model deployment techniques used in"
+                " real-world AI systems.",
+                "https://coursera.org/share/9c0f99a38029917cb3e47942b28724aa",
+                "",
+            ),
+            certification_card(
                 "Machine Learning Advanced",
                 "Ericsson",
                 "Jul 2025",
